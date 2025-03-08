@@ -1,0 +1,65 @@
+# Global rules for all search engines
+User-agent: *
+Allow: /
+Sitemap: https://brijtravels.com/sitemap.xml
+
+# Allow crawling of important content
+Allow: /index.html
+Allow: /gallery.html
+Allow: /images/
+Allow: /itineraries/
+Allow: /destinations/
+Allow: /*.html$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.css$
+Allow: /*.js$
+
+# Explicitly allow service pages for SEO priority
+Allow: /services/cab-services
+Allow: /services/taxi-services
+Allow: /services/local-guides
+
+# Prevent crawling of non-public or irrelevant areas
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*
+Disallow: /*?
+Disallow: /*&
+Disallow: /*#
+Disallow: /search?
+Disallow: /search/
+Disallow: /print/
+Disallow: /print$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+# Crawl optimization for main search engines
+# Googlebot specific rules
+User-agent: Googlebot
+Crawl-delay: 1
+Allow: /
+
+# Googlebot-Image specific rules
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+
+# Bingbot specific rules
+User-agent: bingbot
+Crawl-delay: 2
+Allow: /
+
+# Yandex specific rules
+User-agent: Yandex
+Crawl-delay: 2
+Allow: / 
